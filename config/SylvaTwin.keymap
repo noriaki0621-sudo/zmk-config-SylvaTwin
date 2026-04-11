@@ -73,6 +73,13 @@
             bindings = <&kp LS(LEFT_BRACKET) &kp LS(RIGHT_BRACKET) &kp ENTER &kp LEFT>;
             label = "KAGIKAKKO";
         };
+
+        PW: PW {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(T) &kp H &kp E &kp H &kp I &kp E &kp R &kp O &kp P &kp H &kp A &kp N &kp T &kp N5>;
+            label = "PW";
+        };
     };
 
     keymap {
@@ -113,7 +120,7 @@
 
         layer_3 {
             bindings = <
-&trans          &trans   &kp PAGE_DOWN  &kp UP      &kp PAGE_UP  &trans                         &trans         &kp PAGE_UP  &kp UP_ARROW  &kp PAGE_DOWN  &kp PRINTSCREEN  &trans
+&trans          &trans   &kp PAGE_DOWN  &kp UP      &kp PAGE_UP  &trans                         &trans         &kp PAGE_UP  &kp UP_ARROW  &kp PAGE_DOWN  &kp PRINTSCREEN  &kagikakko
 &kp LCTRL       &kp DEL  &kp LEFT       &kp DOWN    &kp RIGHT    &kp BACKSPACE                  &kp BACKSPACE  &kp LEFT     &kp DOWN      &kp RIGHT      &kp DEL          &kp SEMICOLON
 &kp LEFT_SHIFT  &trans   &kp END        &kp C_MENU  &kp HOME     &kp ENTER      &trans  &trans  &trans         &kp HOME     &kp C_MENU    &kp END        &trans           &kp RIGHT_SHIFT
 &trans          &trans   &trans         &trans      &trans       &trans         &trans  &trans  &kp ENTER      &trans       &trans        &trans         &trans           &trans
